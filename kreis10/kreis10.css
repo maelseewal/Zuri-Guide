@@ -1,0 +1,379 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  --fs-h2: 50px;
+  --fs-h3: 30px;
+  --fs-p: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("Bilder/kreis10_main.jpg");
+
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+/* navbar */
+
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+}
+
+/* flex ding oder so */
+
+.row {
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+
+.col {
+  flex-basis: 50%;
+}
+
+/* header */
+
+header h1 {
+  color: #fff;
+  font-size: 100px;
+}
+
+header p {
+  color: #fff;
+  font-size: 11px;
+}
+
+header button {
+  width: 180px;
+  color: #000;
+  font-size: 12px;
+  padding: 12px 0;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px;
+}
+
+/* .card */
+
+.card {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  border-top: solid white 2px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+
+.card1 {
+  background-image: url("Bilder/kreis10_sehenswürdigkeiten.jpg");
+}
+.card2 {
+  background-image: url("Bilder/kreis10_hotel.jpg");
+}
+.card3 {
+  background-image: url("Bilder/kreis10_restaurant.jpg");
+}
+.card4 {
+  background-image: url("../Bilder/anreise.png");
+}
+.card:hover {
+  transform: translateY(-10px) rotate(1deg) scale(102%) translateX(-2px);
+  filter: saturate(2);
+}
+h5 {
+  color: #fff;
+  text-shadow: 0 0 5px #999;
+}
+.card p {
+  text-shadow: 0 0 15px #000;
+  font-size: 10px;
+}
+
+main {
+  color: #fff;
+}
+
+main h2 {
+  font-size: 100px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: 0;
+}
+
+/* unter start */
+
+#Sehenswürdigkeiten {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("Bilder/kreis10_sehenswürdigkeiten.jpg");
+  width: 100vw;
+  height: 150vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#Sehenswürdigkeiten h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#Sehenswürdigkeiten h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+#Sehenswürdigkeiten p {
+  font-size: var(--fs-p);
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+#Sehenswürdigkeiten .s1,
+#Sehenswürdigkeiten .s2,
+#Sehenswürdigkeiten .s3 {
+  background-color: rgba(15, 15, 15, 0.5);
+  padding: 0px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+
+#Übernachtungsmöglichkeit {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("Bilder/kreis10_hotel.jpg");
+  width: 100vw;
+  height: 150vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#Übernachtungsmöglichkeit h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#Übernachtungsmöglichkeit h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+#Übernachtungsmöglichkeit p {
+  font-size: var(--fs-p);
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+#Übernachtungsmöglichkeit .u1,
+#Übernachtungsmöglichkeit .u2,
+#Übernachtungsmöglichkeit .u3 {
+  background-color: rgba(15, 15, 15, 0.5);
+  padding: 0px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+#Restaurants {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("Bilder/kreis10_restaurant.jpg");
+  width: 100vw;
+  height: 150vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#Restaurants h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#Restaurants h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+#Restaurants p {
+  font-size: var(--fs-p);
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+#Restaurants .r1,
+#Restaurants .r2,
+#Restaurants .r3 {
+  background-color: rgba(15, 15, 15, 0.5);
+  padding: 0px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+
+#Anreise {
+  height: 100vh;
+  padding-top: 20%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../Bilder/anreise.png);
+  background-position: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#Anreise h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #dbdbdb;
+}
+
+#Anreise p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.transport-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.transport-links a {
+  display: inline-block;
+}
+
+.transport-links img {
+  width: 260px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.transport-links img:hover {
+  transform: scale(1.1);
+}
+
+/* @media */
+
+@media (width < 1150px) {
+  .card {
+    width: 150px;
+    height: 190px;
+  }
+  header h1 {
+    color: #fff;
+    font-size: 90px;
+  }
+}
+@media (width < 900px) {
+  :root {
+    --fs-h2: 40px;
+    --fs-h3: 30px;
+    --fs-p: 12px;
+  }
+  .card {
+    width: 250px;
+    height: 100px;
+  }
+  header h1 {
+    color: #fff;
+    font-size: 70px;
+  }
+}

@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url("Bilder/startbild2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  margin-top: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(25, 149, 193);
+  font-size: 130px;
+  /*text-shadow: 0 0 30px rgb(0, 0, 0);*/
+}
+mark {
+  color: rgb(42, 0, 255);
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: rgb(255, 255, 255);
+  font-size: 130px;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  background: rgb(240, 240, 240);
+}
+
+main h2 {
+  padding: 10px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 130px;
+  color: rgb(42, 0, 255);
+  text-align: center;
+}
+#kreiseTitle {
+  text-align: center;
+  font-size: 80px;
+}
+.kreis {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  color: transparent;
+  transition: transform 0.5s;
+}
+
+.kreis:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
+  color: white;
+  transform: translateY(-10px) scale(105%) translateX(-2px);
+}
+
+.kreis a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.kreis1 {
+  background-image: url("kreis1/Bilder/Kreis1.png");
+}
+.kreis2 {
+  background-image: url("kreis2/Bilder/Kreis2.png");
+}
+.kreis3 {
+  background-image: url("kreis3/Bilder/Kreis3.png");
+}
+.kreis4 {
+  background-image: url("kreis4/Bilder/Kreis4.png");
+}
+.kreis5 {
+  background-image: url("kreis5/Bilder/Kreis5.png");
+}
+.kreis6 {
+  background-image: url("kreis6/Bilder/Kreis6.png");
+}
+.kreis7 {
+  background-image: url("kreis7/Bilder/Kreis7.png");
+}
+.kreis8 {
+  background-image: url("kreis8/Bilder/Kreis8.png");
+}
+.kreis9 {
+  background-image: url("kreis9/Bilder/Kreis9.png");
+}
+.kreis10 {
+  background-image: url("kreis10/Bilder/Kreis10.png");
+}
+.kreis11 {
+  background-image: url("kreis11/Bilder/Kreis11.png");
+}
+.kreis12 {
+  background-image: url("kreis12/Bilder/kreis12.png");
+}
+
+.kreis-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footer {
+  display: flex;
+  background-color: rgb(197, 197, 197);
+  height: 100px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+footer h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+  padding: 0;
+}
+footer a {
+  text-decoration: none;
+  text-align: center;
+}
+button {
+  height: 40px;
+  width: 130px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (width < 700px) {
+  .kreis {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1, auto;
+  }
+}
