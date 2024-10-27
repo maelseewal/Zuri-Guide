@@ -172,4 +172,8 @@ button {
     display: grid;
     grid-template-columns: 1, auto;
   }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
