@@ -79,8 +79,12 @@ main h2 {
 .kreis:hover {
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: darken;
-  color: white;
+  color: rgb(255, 255, 255);
   transform: translateY(-10px) scale(105%) translateX(-2px);
+  font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 40;
 }
 
 .kreis a {
@@ -167,9 +171,25 @@ button {
 }
 
 @media (width < 700px) {
-  .kreis {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1, auto;
+  header {
+    background-image: url(Bilder/hochformatstartbild.jpg);
+    height: 40vh;
+  }
+  header h1 {
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(25, 149, 193);
+    font-size: 130px;
+    text-shadow: 0 0 30px rgb(0, 0, 0);
+    mark {
+      color: rgb(42, 0, 255);
+      display: inline-block;
+      background-color: transparent;
+    }
+    .kreis {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1, auto;
+    }
   }
 }

@@ -35,49 +35,68 @@ body {
   display: flex;
   align-items: center;
 }
+
 .logo {
   width: 50px;
   cursor: pointer;
 }
+
 .menu-icon {
   width: 30px;
   cursor: pointer;
   margin-left: 40px;
 }
+
 nav {
   flex: 1;
   text-align: right;
 }
+
 nav ul li {
   list-style: none;
   display: inline-block;
   margin-left: 60px;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 13px;
-
-  /* flex ding oder so */
 }
+
+/* flex ding oder so */
+
 .row {
   display: flex;
   height: 88%;
   align-items: center;
+  justify-content: center;
 }
+
 .col {
   flex-basis: 50%;
+  display: grid;
+  grid-template-rows: repeat(2, 5fr);
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 30vh;
+  gap: 20px;
+}
 
-  /* header */
-}
+/* header */
+
 header h1 {
-  color: #fff;
-  font-size: 100px;
+  display: flex;
+  width: 70vh;
+  color: #ffffff;
+  font-size: 120px;
+  flex-wrap: nowrap;
 }
+
 header p {
-  color: #fff;
+  color: #ffffff;
   font-size: 11px;
 }
+
 header button {
   width: 180px;
   color: #000;
@@ -88,22 +107,41 @@ header button {
   border-radius: 20px;
   outline: none;
   margin-top: 30px;
-
-  /* .card */
 }
+
+/* .card */
+
 .card {
   width: 200px;
   height: 230px;
-  display: inline-block;
   border-radius: 10px;
   border-top: solid white 2px;
-  padding: 15px 25px;
-  box-sizing: border-box;
   cursor: pointer;
-  margin: 10px 15px;
   background-position: center;
   background-size: cover;
   transition: transform 0.5s;
+  justify-self: right;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-weight: bolder;
+}
+.card h5 {
+  font-size: 80%;
+  display: inline-block;
+  font-size: 10;
+  text-decoration: none !important;
+  color: rgb(42, 0, 255);
+  background-color: white;
+}
+.card a {
+  text-decoration: none;
+}
+.card4,
+.card2 {
+  justify-self: left;
+  align-self: center;
 }
 
 .card1 {
@@ -338,17 +376,7 @@ main h2 {
 }
 
 /* @media */
-
-@media (width < 1150px) {
-  .card {
-    width: 150px;
-    height: 190px;
-  }
-  header h1 {
-    color: #fff;
-    font-size: 90px;
-  }
-}
+/* @media */
 @media (width < 900px) {
   :root {
     --fs-h2: 40px;
@@ -362,5 +390,26 @@ main h2 {
   header h1 {
     color: #fff;
     font-size: 70px;
+    width: auto;
+  }
+  .col {
+    flex-basis: 50%;
+    display: grid;
+    grid-template-rows: repeat(4, 5fr);
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 0;
+    gap: 20px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .transport-links {
+    display: flex;
+    flex-direction: column;
+  }
+  #Sehenswürdigkeiten,
+  #Übernachtungsmöglichkeit,
+  #Restaurants {
+    height: auto;
   }
 }
