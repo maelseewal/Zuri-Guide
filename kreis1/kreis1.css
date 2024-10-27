@@ -369,17 +369,6 @@ main h2 {
 }
 
 /* @media */
-
-@media (width < 1150px) {
-  .card {
-    width: 150px;
-    height: 190px;
-  }
-  header h1 {
-    color: #fff;
-    font-size: 90px;
-  }
-}
 @media (width < 900px) {
   :root {
     --fs-h2: 40px;
@@ -393,5 +382,26 @@ main h2 {
   header h1 {
     color: #fff;
     font-size: 70px;
+    width: auto;
+  }
+  .col {
+    flex-basis: 50%;
+    display: grid;
+    grid-template-rows: repeat(4, 5fr);
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 0;
+    gap: 20px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .transport-links {
+    display: flex;
+    flex-direction: column;
+  }
+  #Sehenswürdigkeiten,
+  #Übernachtungsmöglichkeit,
+  #Restaurants {
+    height: auto;
   }
 }
