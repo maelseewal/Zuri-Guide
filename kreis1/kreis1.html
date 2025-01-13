@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zürich Guide || Kreis 1</title>
     <link rel="stylesheet" href="kreis1.css">
-    <link ref="https://fonts.googleapis.com/css2?
-    family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../Bilder/favicon.ico">
 </head>
 
@@ -27,43 +26,36 @@
                 <a href="../index.html"><img src="../Bilder/hamburger.png" alt="menu-icon" class="menu-icon"></a>
             </div>
             <div class="row">
-
                 <h1>Kreis 1</h1>
-
                 <div class="col">
-
                     <a href="#Sehenswürdigkeiten">
                         <div class="card card1">
                             <h5>Sehenswürdigkeiten</h5>
                         </div>
                     </a>
-
                     <a href="#Übernachtungsmöglichkeit">
                         <div class="card card2">
                             <h5>Hotels</h5>
                         </div>
                     </a>
-
                     <a href="#Restaurants">
                         <div class="card card3">
                             <h5>Restaurants</h5>
                         </div>
                     </a>
-
                     <a href="#Anreise">
                         <div class="card card4">
                             <h5>Anreise</h5>
                         </div>
                     </a>
-
                 </div>
+            </div>
+        </div>
     </header>
 
     <main>
-
         <section id="Sehenswürdigkeiten">
             <h2>Sehenswürdigkeiten</h2>
-
             <section class="s1">
                 <h3>Gossmünster</h3>
                 <p>
@@ -72,7 +64,6 @@
                     die Türme zu besteigen und einen wunderschönen Blick über die Stadt Zürich zu geniessen.
                 </p>
             </section>
-
             <section class="s2">
                 <h3>Lindenhof</h3>
                 <p>
@@ -80,7 +71,6 @@
                     Hier stand einst eine römische Festung, und der Ort hat eine bedeutende Geschichte.
                 </p>
             </section>
-
             <section class="s3">
                 <h3>Kunsthaus Zürich</h3>
                 <p>
@@ -91,10 +81,8 @@
             </section>
         </section>
 
-
         <section id="Übernachtungsmöglichkeit">
             <h2>Hotels</h2>
-
             <section class="u1">
                 <h3>Hotel Glockenhof Zürich</h3>
                 <p>
@@ -104,7 +92,6 @@
                     einer besonders empfehlenswerten Wahl.
                 </p>
             </section>
-
             <section class="u2">
                 <h3>Sorell Hotel Seidenhof</h3>
                 <p>
@@ -115,7 +102,6 @@
                     die eine komfortable Unterkunft in bester Lage zu einem fairen Preis suchen.
                 </p>
             </section>
-
             <section class="u3">
                 <h3>Hotel Alexander</h3>
                 <p>
@@ -129,7 +115,6 @@
 
         <section id="Restaurants">
             <h2>Restaurants</h2>
-
             <section class="r1">
                 <h3>Kronenhalle</h3>
                 <p>
@@ -139,7 +124,6 @@
                     Preis-Leistungs-Verhältnis sehr fair.
                 </p>
             </section>
-
             <section class="r2">
                 <h3>Hiltl Pflanzbar</h3>
                 <p>
@@ -148,7 +132,6 @@
                     das Angebot reicht von Buffet bis à la carte.
                 </p>
             </section>
-
             <section class="r3">
                 <h3>Ristorante Bindella</h3>
                 <p>
@@ -170,7 +153,7 @@
                     <img src="../Bilder/ZVV logo.png" alt="ZVV">
                 </a>
 
-                <a href="sbb://" target="_blank">
+                <a href="#" id="openSBB">
                     <img src="../Bilder/SBB logo.png" alt="SBB">
                 </a>
             </div>
@@ -203,7 +186,7 @@
     }
 
     // Eventlistener für den Link
-    document.querySelector('a').addEventListener('click', function (event) {
+    document.getElementById('openSBB').addEventListener('click', function (event) {
         event.preventDefault(); // Verhindere die Standardaktion des Links
         openSBB();
     });
