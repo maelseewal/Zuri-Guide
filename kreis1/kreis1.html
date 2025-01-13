@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="container">
             <div class="navbar">
@@ -160,32 +159,50 @@
         </section>
     </main>
 
-</body>
+    <script>
+        function openSBB() {
+            // URLs für die App und Stores
+            const urls = {
+                ios: {
+                    app: 'sbbmobile://',
+                    store: 'https://apps.apple.com/ch/app/sbb/id362081211'
+                },
+                android: {
+                    app: 'ch.sbb.mobile://',
+                    store: 'https://play.google.com/store/apps/details?id=ch.sbb.mobile'
+                }
+            };
 
-<script>
-    function openSBB() {
-        var start = new Date().getTime();
+            // Betriebssystem erkennen
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            const isAndroid = /Android/.test(navigator.userAgent);
 
-        // Prüfen des Betriebssystems und Verwendung des korrekten URL-Schemas
-        if (navigator.userAgent.indexOf("iPhone") != -1 || navigator.userAgent.indexOf("iPad") != -1) {
-            window.location = "sbbmobile://";  // iOS URL-Schema
-        } else if (navigator.userAgent.indexOf("Android") != -1) {
-            window.location = "ch.sbb.mobile://";  // Android URL-Schema
+            // URL-Set basierend auf Betriebssystem wählen
+            const platform = isIOS ? urls.ios : (isAndroid ? urls.android : null);
+
+            if (!platform) {
+                window.location.href = urls.ios.store; // Fallback auf iOS Store
+                return;
+            }
+
+            // Versuche die App zu öffnen
+            const appWindow = window.open(platform.app);
+
+            // Timer für Fallback zum Store
+            setTimeout(() => {
+                // Wenn appWindow null oder undefined ist, oder wenn es geschlossen wurde
+                if (!appWindow || appWindow.closed) {
+                    window.location.href = platform.store;
+                }
+            }, 2500); // Längere Wartezeit für bessere Zuverlässigkeit
         }
 
-        setTimeout(function () {
-            var end = new Date().getTime();
-            if (end - start < 1000) {
-                var appStoreURL = "";
-                if (navigator.userAgent.indexOf("iPhone") != -1 || navigator.userAgent.indexOf("iPad") != -1) {
-                    appStoreURL = "https://apps.apple.com/ch/app/sbb/id362081211";
-                } else if (navigator.userAgent.indexOf("Android") != -1) {
-                    appStoreURL = "https://play.google.com/store/apps/details?id=ch.sbb.mobile";
-                }
-                window.location = appStoreURL;
-            }
-        }, 1000);
-    }
-</script>
+        // Event Listener hinzufügen
+        document.getElementById('openSBB').addEventListener('click', function (e) {
+            e.preventDefault();
+            openSBB();
+        });
+    </script>
+</body>
 
 </html>
