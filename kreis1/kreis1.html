@@ -179,5 +179,36 @@
     </main>
 
 </body>
+<a href="sbb://">SBB öffnen</a>
+
+<script>
+    // Funktion, um App zu öffnen und nach Verzögerung in den App Store zu leiten
+    function openSBB() {
+        var start = new Date().getTime();
+        window.location = "sbb://";  // Versuch, die SBB-App zu öffnen
+
+        // Nach 1 Sekunde prüfen, ob die App geöffnet wurde
+        setTimeout(function () {
+            var end = new Date().getTime();
+            // Wenn keine Reaktion auf die App-Öffnung erfolgt ist (also keine App geöffnet wurde)
+            if (end - start < 1000) {
+                // Leite den Nutzer zum App Store weiter
+                var appStoreURL = "";
+                if (navigator.userAgent.indexOf("iPhone") != -1 || navigator.userAgent.indexOf("iPad") != -1) {
+                    appStoreURL = "https://apps.apple.com/ch/app/sbb/id362081211"; // Link zur SBB-App im App Store (iOS)
+                } else if (navigator.userAgent.indexOf("Android") != -1) {
+                    appStoreURL = "https://play.google.com/store/apps/details?id=ch.sbb.mobile"; // Link zur SBB-App im Google Play Store (Android)
+                }
+                window.location = appStoreURL; // Weiterleitung zum App Store
+            }
+        }, 1000); // Verzögerung von 1 Sekunde
+    }
+
+    // Eventlistener für den Link
+    document.querySelector('a').addEventListener('click', function (event) {
+        event.preventDefault(); // Verhindere die Standardaktion des Links
+        openSBB();
+    });
+</script>
 
 </html>
